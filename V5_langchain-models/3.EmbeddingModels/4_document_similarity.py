@@ -22,7 +22,7 @@ query_embedding = embedding.embed_query(query)
 
 scores = cosine_similarity([query_embedding], doc_embeddings)[0]
 
-index, score = sorted(list(enumerate(scores)),key=lambda x:x[1])[-1]
+index, score = sorted(list(enumerate(scores)),key=lambda x:x[1])[-1]  #enumerate to add index to the scores, then sort by score and get the last one which is the highest score
 
 print(query)
 print(documents[index])
