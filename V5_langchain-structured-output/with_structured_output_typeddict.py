@@ -15,7 +15,8 @@ class Review(TypedDict):
     pros: Annotated[Optional[list[str]], "Write down all the pros inside a list"]
     cons: Annotated[Optional[list[str]], "Write down all the cons inside a list"]
     name: Annotated[Optional[str], "Write the name of the reviewer"]
-    
+     
+    #Annotated fields are used to provide additional information about the field, which can be used by the model to generate more accurate and relevant responses. In this case, the annotations provide instructions to the model on how to extract the relevant information from the review text and populate the fields of the Review TypedDict.
 
 structured_model = model.with_structured_output(Review)
 
